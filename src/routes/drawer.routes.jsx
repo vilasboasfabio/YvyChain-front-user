@@ -9,6 +9,7 @@ import VerProdutos from "../screens/VerProdutos";
 import StackRoutes from "./stack.routes";
 import PaginaGerenciamento from "../screens/PaginaGerenciamento";
 import LoginScreen from "../screens/LoginScreen";
+import RelatorioSustentabilidade from "../screens/RelatorioSustentabilidade";
 import { View, Image } from "react-native";
 
 const Drawer = createDrawerNavigator();
@@ -287,6 +288,12 @@ const DrawerRoutes = () => {
             textColor: "#fff",
           },
         }}/>
+        <Drawer.Screen name="Relatório" component={RelatorioSustentabilidade} 
+      options={{
+        drawerItemStyle: { height: 0 },  // Esconde o item no menu
+        unmountOnBlur: true  // Desmonta a tela ao perder o foco
+      }} />
+        
 
     </Drawer.Navigator>
   );

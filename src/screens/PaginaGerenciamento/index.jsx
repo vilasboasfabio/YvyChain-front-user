@@ -33,7 +33,7 @@ export default function PaginaGerenciamento() {
     };
 
     const goToReportPage = () => {
-        navigation.navigate('RelatorioSustentabilidade', { empresaId: empresa?.id });
+        navigation.navigate('Relatório', { empresaId: empresa?.id });
     };
 
     return (
