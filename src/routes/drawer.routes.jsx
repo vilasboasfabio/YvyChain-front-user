@@ -20,6 +20,9 @@ const DrawerRoutes = () => {
       screenOptions={{
         drawerActiveTintColor: "white",
         headerTintColor: "white",
+        drawerLabelStyle: {
+          color: 'white',
+        },
       }}
     >
 
@@ -285,7 +288,7 @@ const DrawerRoutes = () => {
             textColor: "#fff",
           },
         }}/>
-        
+
     </Drawer.Navigator>
   );
 };
