@@ -9,7 +9,6 @@ import VerProdutos from "../screens/VerProdutos";
 import StackRoutes from "./stack.routes";
 import PaginaGerenciamento from "../screens/PaginaGerenciamento";
 import LoginScreen from "../screens/LoginScreen";
-import RelatorioSustentabilidade from "../screens/RelatorioSustentabilidade";
 
 const Drawer = createDrawerNavigator();
 
@@ -40,7 +39,6 @@ const DrawerRoutes = () => {
       
       />
       <Drawer.Screen name="LoginScreen" component={LoginScreen} />
-      <Drawer.Screen name="RelatorioSustentabilidade" component={RelatorioSustentabilidade} />
     </Drawer.Navigator>
   );
 };
