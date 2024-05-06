@@ -9,8 +9,7 @@ import VerProdutos from "../screens/VerProdutos";
 import StackRoutes from "./stack.routes";
 import PaginaGerenciamento from "../screens/PaginaGerenciamento";
 import LoginScreen from "../screens/LoginScreen";
-import CustomDrawerContent from "../components/ImageDrawer";
-import { ImageBackground, View, Text, Image } from "react-native";
+import { View, Image } from "react-native";
 
 const Drawer = createDrawerNavigator();
 
