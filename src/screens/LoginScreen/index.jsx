@@ -1,8 +1,13 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import { useFonts } from 'expo-font';
+import { Aboreto_400Regular } from '@expo-google-fonts/aboreto';
+import { ArimaMadurai_100Thin } from '@expo-google-fonts/arima-madurai'; // Corrigido para o nome correto, assumindo que você queria 'Arima Madurai'
+import { ReemKufiFun_400Regular } from '@expo-google-fonts/reem-kufi-fun';
+
 import axios from 'axios';
-import tw from 'tailwind-react-native-classnames';
+import styles from './styles';
 
 const LoginScreen = () => {
     const [cnpj, setCnpj] = useState('');
@@ -29,26 +34,42 @@ const LoginScreen = () => {
         setCnpj(''),
         setSenha('')
     ]
+    const [fontsLoaded] = useFonts({
+        Aboreto_400Regular,
+        ArimaMadurai_100Thin, // Corrigido para a importação correta
+        ReemKufiFun_400Regular,
+      });
+      if (!fontsLoaded) {
+          return <View><Text>Carregando fontes...</Text></View>;
+        }
 
     return (
-        <View style={tw`flex-1 items-center justify-center p-5 bg-white`}>
+        <View style={styles.container}>
+            <Text style={[styles.titulo, { fontFamily: 'Aboreto_400Regular' }]}>Login</Text>
+            <Text style={[styles.texto,  { fontFamily: 'ReemKufiFun_400Regular' }]}>Acesse essa área da sua empresa com as respectivas credenciais</Text>
+            <View style={styles.divinputs}>
             <TextInput
-                style={tw`w-full mb-3 border-b border-gray-300 py-2 px-3`}
+            style={[styles.textoinput,  { fontFamily: 'ReemKufiFun_400Regular' }]}
                 placeholder="Digite o CNPJ"
                 value={cnpj}
                 onChangeText={setCnpj}
                 keyboardType="numeric"
             />
             <TextInput
-                style={tw`w-full mb-3 border-b border-gray-300 py-2 px-3`}
+            style={[styles.textoinput,  { fontFamily: 'ReemKufiFun_400Regular' }]}
                 placeholder="Digite a senha (ID da empresa)"
                 value={senha}
                 onChangeText={setSenha}
                 secureTextEntry
             />
-            <TouchableOpacity style={tw`w-full bg-blue-500 p-3 rounded-lg`} onPress={handleLogin}>
-                <Text style={tw`text-white text-center font-bold`}>Login</Text>
+            </View>
+            <TouchableOpacity 
+                style={styles.botao}
+                onPress={handleLogin}>
+                <Text style={[styles.textobotao, { fontFamily: 'Aboreto_400Regular' }]}>Entre</Text>
             </TouchableOpacity>
+            <Text style={[styles.texto,  { fontFamily: 'ReemKufiFun_400Regular' }]}>Não está no sistema?
+Entre em contato com o nosso suporte</Text>
         </View>
     );
 };
