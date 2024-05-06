@@ -1,4 +1,4 @@
-import { View, Text } from 'react-native';
+import { View, Text, Image } from 'react-native';
 import styles from './styles';
 import Title from '../../components/Title';
 import { useFonts } from 'expo-font';
@@ -19,6 +19,15 @@ export default function Home() {
   return (
     <View className={`flex-1 items-center `} style={[styles.container, {backgroundColor: '#314D27'}]}>
       <Text style={[styles.titulo, { fontFamily: 'Aboreto_400Regular' }]} className={`text-3xl text-white my-9`}>Bem Vindos</Text>
+
+      <View>
+      <View>
+          <Image source={require('../../../assets/mata.jpg')} className={`w-72 h-72 rounded-xl border-solid m-2`}></Image>
+          <Text>Nossa Proposta</Text>
+          <Text>Conheça nossa misão e solução sustentável para o desenvolvimento humano</Text>
+        </View>
+
+      </View>
     </View>
   )
 }
