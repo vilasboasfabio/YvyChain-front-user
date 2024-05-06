@@ -17,8 +17,8 @@ export default function Home() {
     }
 
   return (
-    <View className={`flex-1 items-center`} style={[styles.container, {backgroundColor: '#314D27'}]}>
-      <Text style={[styles.titulo, { fontFamily: 'Aboreto_400Regular' }]} className={`text-3xl`}>Bem Vindos</Text>
+    <View className={`flex-1 items-center `} style={[styles.container, {backgroundColor: '#314D27'}]}>
+      <Text style={[styles.titulo, { fontFamily: 'Aboreto_400Regular' }]} className={`text-3xl text-white my-9`}>Bem Vindos</Text>
     </View>
   )
 }
