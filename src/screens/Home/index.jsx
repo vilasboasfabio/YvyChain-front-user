@@ -20,14 +20,16 @@ export default function Home() {
     <View className={`flex-1 items-center `} style={[styles.container, {backgroundColor: '#314D27'}]}>
       <Text style={[styles.titulo, { fontFamily: 'Aboreto_400Regular' }]} className={`text-3xl text-white my-9`}>Bem Vindos</Text>
 
-      <View>
-      <View>
-          <Image source={require('../../../assets/mata.jpg')} className={`w-72 h-72 rounded-xl border-solid m-2`}></Image>
-          <Text>Nossa Proposta</Text>
-          <Text>Conheça nossa misão e solução sustentável para o desenvolvimento humano</Text>
-        </View>
+      <View style={{  marginTop: 5 }}>
+       <View style={[styles.cards, { flexDirection: "row", justifyContent: "center", backgroundColor: '#EED2B8', width: 370, borderRadius: 8}]}>
+         <Image source={require('../../../assets/mata.jpg')} style={{ width: 160, height: 240, marginRight: 10}} />
+           <View style={{ flex: 1 }}>
+             <Text style={{ fontFamily: 'ReemKufiFun_400Regular', marginBottom: 5, textAlign: 'center', marginTop: 40, marginBottom: 30 }}>Nossa Proposta</Text>
+             <Text style={{ flexWrap: 'wrap', fontFamily: 'ArimaMadurai_100Thin' }}>Conheça nossa missão e solução sustentável para o desenvolvimento humano</Text>
+    </View>
+  </View>
+</View>
 
-      </View>
     </View>
   )
 }
