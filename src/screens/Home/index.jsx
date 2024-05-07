@@ -25,7 +25,15 @@ export default function Home() {
          <Image source={require('../../../assets/mata.jpg')} style={{ width: 160, height: 240, marginRight: 10}} />
            <View style={{ flex: 1 }}>
              <Text style={{ fontFamily: 'ReemKufiFun_400Regular', marginBottom: 5, textAlign: 'center', marginTop: 40, marginBottom: 30 }}>Nossa Proposta</Text>
-             <Text style={{ flexWrap: 'wrap', fontFamily: 'ArimaMadurai_100Thin' }}>Conheça nossa missão e solução sustentável para o desenvolvimento humano</Text>
+             <Text style={{ flexWrap: 'wrap', fontFamily: 'ArimaMadurai_100Thin' }}>Conheça nossa missão e solução sustentável para o desenvolvimento humano.</Text>
+    </View>
+  </View>
+
+       <View style={[styles.cards, { flexDirection: "row", justifyContent: "center", backgroundColor: '#EED2B8', width: 370, borderRadius: 8}]}>
+         <Image source={require('../../../assets/tucano.jpg')} style={{ width: 160, height: 240, marginRight: 10}} />
+           <View style={{ flex: 1, alignItems: 'center' }}>
+             <Text style={{ fontFamily: 'ReemKufiFun_400Regular', marginBottom: 5, textAlign: 'center', marginTop: 40, marginBottom: 30 }}>Sua Contribuição</Text>
+             <Text style={{ flexWrap: 'wrap', fontFamily: 'ArimaMadurai_100Thin' }}>Entenda como sua colaboração nesse projeto pode promover o desenvolvimento.</Text>
     </View>
   </View>
 </View>
