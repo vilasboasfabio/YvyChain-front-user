@@ -237,6 +237,37 @@ const DrawerRoutes = () => {
           unmountOnBlur: true,
         }}
       />
+      <Drawer.Screen
+        name="VerProdutos"
+        component={VerProdutos}
+        options={{
+          title: "VerProdutos",
+          headerTitle: "",
+          headerTitle: () => (
+            <View style={{ flexDirection: "row", alignItems: "right" }}>
+              <Image
+                source={require("../../assets/logo.png")}
+                style={{
+                  width: 75,
+                  height: 75,
+                  marginLeft: 260,
+                  marginBottom: 20,
+                  marginTop: 18,
+                }}
+              />
+            </View>
+          ),
+          headerStyle: {
+            backgroundColor: "#3B5B30",
+          },
+          drawerStyle: {
+            backgroundColor: "#3B5B30",
+            textColor: "#fff",
+          },
+          drawerItemStyle: { height: 0 }, // Esconde o item no menu
+          unmountOnBlur: true,
+        }}
+      />
     </Drawer.Navigator>
   );
 };

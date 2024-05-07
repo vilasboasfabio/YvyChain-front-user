@@ -39,40 +39,58 @@ export default function VerSetores(){
       };
 
     return (
-        <View style={tw`flex-1 bg-white p-4`}>
+      <View className={`flex-1 p-4`} style={{
+        backgroundColor: "#314D27",
+      }}>
           <ScrollView>
-            <TextInput
-                style={tw`border border-gray-300 p-2 mb-4`}
-                placeholder="Pesquisar setores"
-                onChangeText={text => setSearchTerm(text)}
-                value={searchTerm}
-            />
-            <TouchableOpacity onPress={() => setOrder(order === 'asc' ? 'desc' : 'asc')}>
-                <Text>Ordenar {order === 'asc' ? 'Descendente' : 'Ascendente'}</Text>
-            </TouchableOpacity>
-            <FlatList
-                data={sectors}
-                keyExtractor={item => item.id}
-                renderItem={({ item }) => (
-                    <Text style={tw`p-2 border-b border-gray-300`}>{item.nome}</Text>
-                )}
-            />
-            </ScrollView>
-            <View
-        className={`flex-row mx-auto -mt-20 fixed justify-around items-center w-5/6 h-14 rounded-3xl mb-10`}
-        style={{ backgroundColor: '#3B5B30' }}
-      >
-        <TouchableOpacity className={`items-center`} onPress={goToSectorsPage}>
-          <FontAwesome name="industry" size={24} color="black" />
-        </TouchableOpacity>
-        <TouchableOpacity className={`items-center`} onPress={goToProductsPage}>
-          <FontAwesome name="shopping-cart" size={24} color="black" />
-        </TouchableOpacity>
-        <TouchableOpacity className={`items-center`} onPress={voltarParaAPaginaDeGerenciamento}>
-          <FontAwesome name="truck" size={24} color="black" />
-        </TouchableOpacity>
+          <Text className={`text-white text-2xl text-center mb-6`}>Pesquisar setores:</Text>
+          <TextInput
+              style={tw`border border-gray-300 p-2 mb-4`}
+              onChangeText={text => setSearchTerm(text)}
+              value={searchTerm}
+          />
+         <View>
+          <TouchableOpacity onPress={() => setOrder(order === 'asc' ? 'desc' : 'asc')} style={{
+                backgroundColor: "#EED2B8",
+              }} className={`w-52 mb-6 rounded-lg`}>
+              <Text className={`p-2 border-gray-300 text-black text-center`} >Ordenar {order === 'asc' ? 'Descendente' : 'Ascendente'}</Text>
+          </TouchableOpacity>
+          </View>
+          <FlatList
+              data={sectors}
+              keyExtractor={item => item.id}
+              renderItem={({ item }) => (
+                
+                <View style={{
+                  flexDirection: "row",
+                  alignItems: "center",
+                  
+                }}>
+                  <Text className={`p-2 border-b border-gray-300 text-white`}>{item.nome}</Text>
+                  
+                  <Text className={`p-2 border-b ml-0 text-right w-64 border-gray-300 text-white`}>Nota: {item.impacto_ambiental}</Text>
+
+                </View>
+        
+              )}
+          />
+          </ScrollView>
+          <View
+      className={`flex-row mx-auto -mt-20 fixed justify-around items-center w-5/6 h-14 rounded-3xl mb-10`}
+      style={{ backgroundColor: '#3B5B30' }}
+    >
+      <TouchableOpacity className={`items-center`} onPress={goToSectorsPage}>
+        <FontAwesome name="industry" size={24} color="black" />
+      </TouchableOpacity>
+      <TouchableOpacity className={`items-center`} onPress={goToProductsPage}>
+        <FontAwesome name="shopping-cart" size={24} color="black" />
+      </TouchableOpacity>
+      <TouchableOpacity className={`items-center`} onPress={voltarParaAPaginaDeGerenciamento}>
+        <FontAwesome name="truck" size={24} color="black" />
+      </TouchableOpacity>
+    </View>
+    
       </View>
-        </View>
     );
 
 }

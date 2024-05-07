@@ -40,22 +40,50 @@ export default function VerProdutos() {
 
 
     return (
-        <View style={tw`flex-1 bg-white p-4`}>
+        <View className={`flex-1 p-4`} style={{
+          backgroundColor: "#314D27",
+        }}>
             <ScrollView>
+            <Text className={`text-white text-2xl text-center mb-6`}>Pesquisar Produtos:</Text>
             <TextInput
                 style={tw`border border-gray-300 p-2 mb-4`}
-                placeholder="Pesquisar produtos"
                 onChangeText={text => setSearchTerm(text)}
                 value={searchTerm}
             />
-            <TouchableOpacity onPress={() => setOrder(order === 'asc' ? 'desc' : 'asc')}>
-                <Text>Ordenar {order === 'asc' ? 'Descendente' : 'Ascendente'}</Text>
+           <View>
+            <TouchableOpacity onPress={() => setOrder(order === 'asc' ? 'desc' : 'asc')} style={{
+                  backgroundColor: "#EED2B8",
+                }} className={`w-52 mb-6 rounded-lg`}>
+                <Text className={`p-2 border-gray-300 text-black text-center`} >Ordenar {order === 'asc' ? 'Descendente' : 'Ascendente'}</Text>
             </TouchableOpacity>
+            </View>
             <FlatList
                 data={products}
                 keyExtractor={item => item.id}
                 renderItem={({ item }) => (
-                    <Text style={tw`p-2 border-b border-gray-300`}>{item.nome}</Text>
+                  <View style={{
+                    backgroundColor: "#EED2B8",
+                  }} className={`rounded-lg p-2`}>
+                  <View style={{
+                    flexDirection: "row",
+                    alignItems: "center",
+                    
+                  }} className={`mt-4`}>
+                    <Text className={`p-2 border-b border-gray-800 text-black`}>{item.nome}</Text>
+                    <Text className={`p-2 border-b text-right border-gray-800 w-60 text-black`}>Nota: {item.nota_impacto_ambiental}</Text>
+
+                  </View>
+                  <View style={{
+                    flexDirection: "row",
+                    alignItems: "center",
+                    
+                  }} className={`mt-4`}>
+                    
+                    <Text className={`p-2 border-b border-gray-800 text-black`}>Consumo de Recursos: {item.consumo_de_recursos}</Text>
+                    <Text className={`p-2 border-b border-gray-800 text-black ml-1 text-right`}>Pontuação de C02:{item.emissao_de_carbono}</Text>
+
+                  </View>
+                  </View>
                 )}
             />
             </ScrollView>
