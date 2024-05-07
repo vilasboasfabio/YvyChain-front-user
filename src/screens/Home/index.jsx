@@ -1,4 +1,4 @@
-import { View, Text, Image } from 'react-native';
+import { View, Text, Image, ScrollView } from 'react-native';
 import styles from './styles';
 import Title from '../../components/Title';
 import { useFonts } from 'expo-font';
@@ -17,6 +17,8 @@ export default function Home() {
     }
 
   return (
+    <ScrollView>
+      
     <View className={`flex-1 items-center `} style={[styles.container, {backgroundColor: '#314D27'}]}>
       <Text style={[styles.titulo, { fontFamily: 'Aboreto_400Regular' }]} className={`text-3xl text-white my-9`}>Bem Vindos</Text>
 
@@ -36,8 +38,17 @@ export default function Home() {
              <Text style={{ flexWrap: 'wrap', fontFamily: 'ArimaMadurai_100Thin' }}>Entenda como sua colaboração nesse projeto pode promover o desenvolvimento.</Text>
     </View>
   </View>
+
+       <View style={[styles.cards, { flexDirection: "row", justifyContent: "center", backgroundColor: '#EED2B8', width: 370, borderRadius: 8}]}>
+         <Image source={require('../../../assets/yvy1.jpg')} style={{ width: 160, height: 240, marginRight: 10}} />
+           <View style={{ flex: 1, alignItems: 'center' }}>
+             <Text style={{ fontFamily: 'ReemKufiFun_400Regular', marginBottom: 5, textAlign: 'center', marginTop: 40, marginBottom: 30 }}>Conheça a Yvy</Text>
+             <Text style={{ flexWrap: 'wrap', fontFamily: 'ArimaMadurai_100Thin' }}>A nossa inteligência capaz de rastrear a pegada ecológica e a classificação de desenvolvimento da sua empresa.</Text>
+    </View>
+  </View>
 </View>
 
     </View>
+    </ScrollView>
   )
 }
