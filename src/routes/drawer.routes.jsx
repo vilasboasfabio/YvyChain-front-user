@@ -23,11 +23,10 @@ const DrawerRoutes = () => {
         drawerActiveTintColor: "white",
         headerTintColor: "white",
         drawerLabelStyle: {
-          color: 'white',
+          color: "white",
         },
       }}
     >
-
       <Drawer.Screen
         name="Home"
         component={Home}
@@ -59,21 +58,10 @@ const DrawerRoutes = () => {
       />
 
       <Drawer.Screen
-        name="VerEmpresas"
-        component={VerEmpresas}
+        name="LoginScreen"
+        component={LoginScreen}
         options={{
-          drawerItemStyle: { height: 0 },  // Esconde o item no menu
-          unmountOnBlur: true  // Desmonta a tela ao perder o foco
-        }}
-      />
-
-      <Drawer.Screen
-        name="DetalhesEmpresa"
-        component={DetalhesEmpresa}
-        options={{
-          drawerItemStyle: { height: 0 }, // Esconde o item no menu
-          unmountOnBlur: true, // Desmonta a tela ao perder o foco
-          title: "Empresas",
+          title: "Login",
           headerTitle: "",
           headerTitle: () => (
             <View style={{ flexDirection: "row", alignItems: "right" }}>
@@ -98,66 +86,6 @@ const DrawerRoutes = () => {
           },
         }}
       />
-
-
-      <Drawer.Screen
-        name="DetalhesFornecedor"
-        component={DetalhesFornecedor}
-        options={{
-          drawerItemStyle: { height: 0 }, // Esconde o item no menu
-          unmountOnBlur: true, // Desmonta a tela ao perder o foco
-          title: "Fornecedores",
-          headerTitle: "",
-          headerTitle: () => (
-            <View style={{ flexDirection: "row", alignItems: "right" }}>
-              <Image
-                source={require("../../assets/logo.png")}
-                style={{
-                  width: 75,
-                  height: 75,
-                  marginLeft: 260,
-                  marginBottom: 20,
-                  marginTop: 18,
-                }}
-              />
-            </View>
-          ),
-          headerStyle: {
-            backgroundColor: "#3B5B30",
-          },
-          drawerStyle: {
-            backgroundColor: "#3B5B30",
-            textColor: "#fff",
-          },
-        }}
-      />
-
-      <Drawer.Screen name="VerProdutos" component={VerProdutos} 
-        options={{
-          title: "Produtos",
-          headerTitle: "",
-          headerTitle: () => (
-            <View style={{ flexDirection: "row", alignItems: "right" }}>
-              <Image
-                source={require("../../assets/logo.png")}
-                style={{
-                  width: 75,
-                  height: 75,
-                  marginLeft: 260,
-                  marginBottom: 20,
-                  marginTop: 18,
-                }}
-              />
-            </View>
-          ),
-          headerStyle: {
-            backgroundColor: "#3B5B30",
-          },
-          drawerStyle: {
-            backgroundColor: "#3B5B30",
-            textColor: "#fff",
-          },
-        }}/>
 
       <Drawer.Screen
         name="StackRoutes"
@@ -180,7 +108,7 @@ const DrawerRoutes = () => {
                 }}
               />
             </View>
-          )
+          ),
         }}
       />
 
@@ -211,12 +139,16 @@ const DrawerRoutes = () => {
             backgroundColor: "#3B5B30",
             textColor: "#fff",
           },
+          drawerItemStyle: { height: 0 }, // Esconde o item no menu
+          unmountOnBlur: true,
         }}
       />
 
-      <Drawer.Screen name="LoginScreen" component={LoginScreen} 
-       options={{
-          title: "Login",
+      <Drawer.Screen
+        name="VerSetores"
+        component={VerSetores}
+        options={{
+          title: "Home",
           headerTitle: "",
           headerTitle: () => (
             <View style={{ flexDirection: "row", alignItems: "right" }}>
@@ -239,24 +171,72 @@ const DrawerRoutes = () => {
             backgroundColor: "#3B5B30",
             textColor: "#fff",
           },
-        }}/>
-        <Drawer.Screen name="Relatório" component={RelatorioSustentabilidade} 
-      options={{
-        drawerItemStyle: { height: 0 },  // Esconde o item no menu
-        unmountOnBlur: true  // Desmonta a tela ao perder o foco
-      }} />
-      <Drawer.Screen name="VerSetores" component={VerSetores}
-      options={{
-        drawerItemStyle: { height: 0 },  // Esconde o item no menu
-        unmountOnBlur: true  // Desmonta a tela ao perder o foco
-      }} />
-      <Drawer.Screen name="VerTodasEmpresas" component={VerTodasEmpresas}
-      options={{
-        drawerItemStyle: { height: 0 },  // Esconde o item no menu
-        unmountOnBlur: true  // Desmonta a tela ao perder o foco
-      }} />
-        
-
+          drawerItemStyle: { height: 0 }, // Esconde o item no menu
+          unmountOnBlur: true,
+        }}
+      />
+      <Drawer.Screen
+        name="VerTodasEmpresas"
+        component={VerTodasEmpresas}
+        options={{
+          title: "Home",
+          headerTitle: "",
+          headerTitle: () => (
+            <View style={{ flexDirection: "row", alignItems: "right" }}>
+              <Image
+                source={require("../../assets/logo.png")}
+                style={{
+                  width: 75,
+                  height: 75,
+                  marginLeft: 260,
+                  marginBottom: 20,
+                  marginTop: 18,
+                }}
+              />
+            </View>
+          ),
+          headerStyle: {
+            backgroundColor: "#3B5B30",
+          },
+          drawerStyle: {
+            backgroundColor: "#3B5B30",
+            textColor: "#fff",
+          },
+          drawerItemStyle: { height: 0 }, // Esconde o item no menu
+          unmountOnBlur: true,
+        }}
+      />
+      <Drawer.Screen
+        name="Relatório"
+        component={RelatorioSustentabilidade}
+        options={{
+          title: "Relatório",
+          headerTitle: "",
+          headerTitle: () => (
+            <View style={{ flexDirection: "row", alignItems: "right" }}>
+              <Image
+                source={require("../../assets/logo.png")}
+                style={{
+                  width: 75,
+                  height: 75,
+                  marginLeft: 260,
+                  marginBottom: 20,
+                  marginTop: 18,
+                }}
+              />
+            </View>
+          ),
+          headerStyle: {
+            backgroundColor: "#3B5B30",
+          },
+          drawerStyle: {
+            backgroundColor: "#3B5B30",
+            textColor: "#fff",
+          },
+          drawerItemStyle: { height: 0 }, // Esconde o item no menu
+          unmountOnBlur: true,
+        }}
+      />
     </Drawer.Navigator>
   );
 };
