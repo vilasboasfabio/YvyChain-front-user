@@ -11,6 +11,12 @@ const RelatorioSustentabilidade = () => {
     const [relatorio, setRelatorio] = useState(null);
     const apiUrl = process.env.EXPO_PUBLIC_API_URL;
 
+    const { empresaId } = route.params;
+
+    const voltarParaAPaginaDeGerenciamento = () =>{
+        navigation.navigate('PaginaGerenciamento', {empresaId: empresaId});
+    }
+
     useEffect(() => {
         const fetchDadosRelatorio = async () => {
             const { empresaId } = route.params;
@@ -71,7 +77,7 @@ const RelatorioSustentabilidade = () => {
             {formatRelatorio(relatorio)}
             <View>
                 
-                <TouchableOpacity style={tw`mt-5 bg-green-500 p-3 rounded-lg`} onPress={() =>  navigation.navigate('Home')}>
+                <TouchableOpacity style={tw`mt-5 bg-green-500 p-3 rounded-lg`} onPress={voltarParaAPaginaDeGerenciamento}>
                     <Text style={tw`text-white text-center font-bold`}>Voltar</Text>
                 </TouchableOpacity>
 

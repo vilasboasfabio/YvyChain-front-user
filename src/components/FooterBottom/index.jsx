@@ -8,7 +8,7 @@ const FooterBottom = () => {
     const navigation = useNavigation();
 
     const navigateToSectors = () => {
-        navigation.navigate('CadastroSetores');
+        navigation.navigate('VerTodasEmpresas');
     };
 
     const navigateToProducts = () => {

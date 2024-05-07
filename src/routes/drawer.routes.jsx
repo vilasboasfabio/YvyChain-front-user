@@ -3,7 +3,7 @@ import { createDrawerNavigator } from "@react-navigation/drawer";
 import Home from "../screens/Home";
 import VerEmpresas from "../screens/VerEmpresas";
 import DetalhesEmpresa from "../screens/DetalhesEmpresa";
-import VerFornecedores from "../screens/VerFornecedores";
+
 import DetalhesFornecedor from "../screens/DetalhesFornecedor";
 import VerProdutos from "../screens/VerProdutos";
 import StackRoutes from "./stack.routes";
@@ -11,6 +11,8 @@ import PaginaGerenciamento from "../screens/PaginaGerenciamento";
 import LoginScreen from "../screens/LoginScreen";
 import RelatorioSustentabilidade from "../screens/RelatorioSustentabilidade";
 import { View, Image } from "react-native";
+import VerSetores from "../screens/VerSetores";
+import VerTodasEmpresas from "../screens/VerTodasEmpresas";
 
 const Drawer = createDrawerNavigator();
 
@@ -60,29 +62,8 @@ const DrawerRoutes = () => {
         name="VerEmpresas"
         component={VerEmpresas}
         options={{
-          title: "Empresas",
-          headerTitle: "",
-          headerTitle: () => (
-            <View style={{ flexDirection: "row", alignItems: "right" }}>
-              <Image
-                source={require("../../assets/logo.png")}
-                style={{
-                  width: 75,
-                  height: 75,
-                  marginLeft: 260,
-                  marginBottom: 20,
-                  marginTop: 18,
-                }}
-              />
-            </View>
-          ),
-          headerStyle: {
-            backgroundColor: "#3B5B30",
-          },
-          drawerStyle: {
-            backgroundColor: "#3B5B30",
-            textColor: "#fff",
-          },
+          drawerItemStyle: { height: 0 },  // Esconde o item no menu
+          unmountOnBlur: true  // Desmonta a tela ao perder o foco
         }}
       />
 
@@ -118,35 +99,6 @@ const DrawerRoutes = () => {
         }}
       />
 
-      <Drawer.Screen
-        name="VerFornecedores"
-        component={VerFornecedores}
-        options={{
-          title: "Fornecedores",
-          headerTitle: "",
-          headerTitle: () => (
-            <View style={{ flexDirection: "row", alignItems: "right" }}>
-              <Image
-                source={require("../../assets/logo.png")}
-                style={{
-                  width: 75,
-                  height: 75,
-                  marginLeft: 260,
-                  marginBottom: 20,
-                  marginTop: 18,
-                }}
-              />
-            </View>
-          ),
-          headerStyle: {
-            backgroundColor: "#3B5B30",
-          },
-          drawerStyle: {
-            backgroundColor: "#3B5B30",
-            textColor: "#fff",
-          },
-        }}
-      />
 
       <Drawer.Screen
         name="DetalhesFornecedor"
@@ -289,6 +241,16 @@ const DrawerRoutes = () => {
           },
         }}/>
         <Drawer.Screen name="Relatório" component={RelatorioSustentabilidade} 
+      options={{
+        drawerItemStyle: { height: 0 },  // Esconde o item no menu
+        unmountOnBlur: true  // Desmonta a tela ao perder o foco
+      }} />
+      <Drawer.Screen name="VerSetores" component={VerSetores}
+      options={{
+        drawerItemStyle: { height: 0 },  // Esconde o item no menu
+        unmountOnBlur: true  // Desmonta a tela ao perder o foco
+      }} />
+      <Drawer.Screen name="VerTodasEmpresas" component={VerTodasEmpresas}
       options={{
         drawerItemStyle: { height: 0 },  // Esconde o item no menu
         unmountOnBlur: true  // Desmonta a tela ao perder o foco
