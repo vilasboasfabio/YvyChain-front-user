@@ -5,7 +5,7 @@ import { useFonts } from "expo-font";
 import { Aboreto_400Regular } from "@expo-google-fonts/aboreto";
 import { ArimaMadurai_100Thin } from "@expo-google-fonts/arima-madurai"; // Corrigido para o nome correto, assumindo que você queria 'Arima Madurai'
 import { ReemKufiFun_400Regular } from "@expo-google-fonts/reem-kufi-fun";
-import FooterBottom from "../../components/FooterBottom";
+
 
 export default function Home() {
   const [fontsLoaded] = useFonts({
