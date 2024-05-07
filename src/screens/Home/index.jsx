@@ -46,6 +46,7 @@ export default function Home() {
                 borderRadius: 8,
               },
             ]}
+            className={`-ml-5`}
           >
             <Image
               source={require("../../../assets/mata.jpg")}
@@ -65,6 +66,7 @@ export default function Home() {
               </Text>
               <Text
                 style={{ flexWrap: "wrap", fontFamily: "ArimaMadurai_100Thin" }}
+                className={`text-justify w-5/6 ml-2`}
               >
                 Conheça nossa missão e solução sustentável para o
                 desenvolvimento humano.
@@ -92,10 +94,11 @@ export default function Home() {
                 borderRadius: 8,
               },
             ]}
+            className={`ml-12`}
           >
             <Image
               source={require("../../../assets/tucano.jpg")}
-              style={{ width: 160, height: 240, marginRight: 10 }}
+              style={{ width: 160, height: 240, marginRight: 10, borderTopLeftRadius: 8, borderBottomLeftRadius: 8, }}
             />
             <View style={{ flex: 1, alignItems: "center" }}>
               <Text
@@ -111,6 +114,7 @@ export default function Home() {
               </Text>
               <Text
                 style={{ flexWrap: "wrap", fontFamily: "ArimaMadurai_100Thin" }}
+                className={`w-5/6 text-justify mr-2`}
               >
                 Entenda como sua colaboração nesse projeto pode promover o
                 desenvolvimento.
@@ -157,6 +161,7 @@ export default function Home() {
               </Text>
               <Text
                 style={{ flexWrap: "wrap", fontFamily: "ArimaMadurai_100Thin" }}
+                className={`text-justify`}
               >
                 A nossa inteligência capaz de rastrear a pegada ecológica e a
                 classificação de desenvolvimento da sua empresa.
@@ -173,11 +178,11 @@ export default function Home() {
               marginBottom: 5,
               marginRight: 20,
               marginLeft: 20,
-              textAlign: "center",
               marginTop: 40,
               marginBottom: 40,
               color: 'white'
             }}
+            className={`text-justify`}
           >
             O projeto YvyChain é um sistema ambicioso que busca integrar
             sustentabilidade profundamente nos processos de produção industrial.
