@@ -13,12 +13,13 @@ import RelatorioSustentabilidade from "../screens/RelatorioSustentabilidade";
 import { View, Image } from "react-native";
 import VerSetores from "../screens/VerSetores";
 import VerTodasEmpresas from "../screens/VerTodasEmpresas";
+import CustomDrawerContent from "../components/ImageDrawer";
 
 const Drawer = createDrawerNavigator();
 
 const DrawerRoutes = () => {
   return (
-    <Drawer.Navigator
+    <Drawer.Navigator drawerContent={(props) => <CustomDrawerContent {...props} />}
       screenOptions={{
         drawerActiveTintColor: "white",
         headerTintColor: "white",
@@ -27,7 +28,7 @@ const DrawerRoutes = () => {
         },
       }}
     >
-      <Drawer.Screen
+      <Drawer.Screen 
         name="Home"
         component={Home}
         options={{
