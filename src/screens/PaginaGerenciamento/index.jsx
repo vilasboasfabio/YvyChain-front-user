@@ -248,7 +248,7 @@ export default function PaginaGerenciamento() {
           <FontAwesome name="folder" size={24} color="black" />
         </TouchableOpacity>
         <TouchableOpacity className={`items-center`} onPress={goToProductsPage}>
-          <FontAwesome name="shopping-cart" size={24} color="black" />
+          <FontAwesome name="product-hunt" size={24} color="black" />
         </TouchableOpacity>
         <TouchableOpacity
           className={`items-center`}
