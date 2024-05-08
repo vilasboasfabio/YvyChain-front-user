@@ -245,7 +245,7 @@ export default function PaginaGerenciamento() {
         style={{ backgroundColor: "#3B5B30" }}
       >
         <TouchableOpacity className={`items-center`} onPress={goToSectorsPage}>
-          <FontAwesome name="industry" size={24} color="black" />
+          <FontAwesome name="folder" size={24} color="black" />
         </TouchableOpacity>
         <TouchableOpacity className={`items-center`} onPress={goToProductsPage}>
           <FontAwesome name="shopping-cart" size={24} color="black" />
@@ -254,7 +254,7 @@ export default function PaginaGerenciamento() {
           className={`items-center`}
           onPress={voltarParaAPaginaDeGerenciamento}
         >
-          <FontAwesome name="truck" size={24} color="black" />
+          <FontAwesome name="industry" size={24} color="black" />
         </TouchableOpacity>
       </View>
     </View>

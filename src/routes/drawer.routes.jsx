@@ -41,7 +41,7 @@ const DrawerRoutes = () => {
                   width: 75,
                   height: 75,
                   marginLeft: 260,
-                  marginBottom: 20,
+                  marginBottom: 29,
                   marginTop: 18,
                 }}
               />
@@ -49,6 +49,7 @@ const DrawerRoutes = () => {
           ),
           headerStyle: {
             backgroundColor: "#3B5B30",
+            height: 110,
           },
           drawerStyle: {
             backgroundColor: "#3B5B30",
@@ -79,6 +80,7 @@ const DrawerRoutes = () => {
           ),
           headerStyle: {
             backgroundColor: "#3B5B30",
+            height: 110,
           },
           drawerStyle: {
             backgroundColor: "#3B5B30",
@@ -134,6 +136,7 @@ const DrawerRoutes = () => {
           ),
           headerStyle: {
             backgroundColor: "#3B5B30",
+            height: 110,
           },
           drawerStyle: {
             backgroundColor: "#3B5B30",
@@ -166,6 +169,7 @@ const DrawerRoutes = () => {
           ),
           headerStyle: {
             backgroundColor: "#3B5B30",
+            height: 110,
           },
           drawerStyle: {
             backgroundColor: "#3B5B30",
@@ -228,6 +232,7 @@ const DrawerRoutes = () => {
           ),
           headerStyle: {
             backgroundColor: "#3B5B30",
+            height: 110,
           },
           drawerStyle: {
             backgroundColor: "#3B5B30",
@@ -259,6 +264,7 @@ const DrawerRoutes = () => {
           ),
           headerStyle: {
             backgroundColor: "#3B5B30",
+            height: 110,
           },
           drawerStyle: {
             backgroundColor: "#3B5B30",

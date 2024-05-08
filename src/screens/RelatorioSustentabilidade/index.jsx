@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, ScrollView, TouchableOpacity } from 'react-native';
+import { View, Text, ScrollView, TouchableOpacity, Image } from 'react-native';
 import axios from 'axios';
 import tw from 'tailwind-react-native-classnames';
 import { useRoute } from '@react-navigation/native';
@@ -41,7 +41,16 @@ const RelatorioSustentabilidade = () => {
     }, [route.params]);
 
     const formatRelatorio = (relatorio) => {
-        if (!relatorio) return <Text>Carregando relatório...</Text>;
+        if (!relatorio) return<View className={`mx-auto`}>
+          <Image
+              source={require("../../../assets/logo.png")}
+              style={{ width: 160, height: 240, marginRight: 10 }}
+            />
+          <Text style={[
+                  styles.texto2,
+                  { fontFamily: "ArimaMadurai_100Thin" },
+                ]}>Carregando relatório...</Text>
+          </View>;
 
         return (
             <>
